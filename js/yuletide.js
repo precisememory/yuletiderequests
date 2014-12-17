@@ -2,8 +2,8 @@
 $(document).ready(function(){
 
 	$.ajax({
-	//url: "https://raw.githubusercontent.com/precisememory/yuletiderequests/master/Yule2014Requests.txt",
-	url: "./Yule2014Requests.txt",
+	url: "https://raw.githubusercontent.com/precisememory/yuletiderequests/master/Yule2014Requests.txt",
+	//url: "./Yule2014Requests.txt",
 	data: {},
 	success: function( data ) {
 		parseData(data);
