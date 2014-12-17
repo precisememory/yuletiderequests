@@ -5,6 +5,7 @@ $(document).ready(function(){
 	//url: "https://raw.githubusercontent.com/precisememory/yuletiderequests/master/Yule2014Requests.txt",
 	url: "http://precisememory.github.io/yule/Yule2014Requests.txt",
 	data: {},
+	dataType: "text",
 	success: function( data ) {
 		alert(data);
 		parseData(data);
