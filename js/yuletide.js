@@ -18,10 +18,10 @@ var mapRequesterToRequests = {};
 var mapFandomToRequests = {};
 
 function parseData(data){
-	var dataByRequester = data.split("***"); //an array of strings, each with all data for a participant's requests
+	var dataByRequester = data.split("***\n"); //an array of strings, each with all data for a participant's requests
 	//regular expression to parse out requester name: "Request " + n + " by " + name
 	//var re = /Request \d by .+/;
-	alert(dataByRequester); //debug
+	alert(dataByRequester[0]); //debug
 	for(var dbr in dataByRequester){
 		var ao3username;
 		var fandoms = {};
