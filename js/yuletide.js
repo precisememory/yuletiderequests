@@ -2,6 +2,7 @@
 $(document).ready(function(){
 
 	$.ajax({
+	//url: "https://raw.githubusercontent.com/precisememory/yuletiderequests/master/Yule2014Requests.txt",
 	url: "./Yule2014Requests.txt",
 	data: {},
 	success: function( data ) {
@@ -41,8 +42,8 @@ function parseData(data){
 					i++;
 				}
 				var letter = "";
-				if(lines[i].startsWith("Letter:"){
-					lettter = lines[i].substring(lines[i].indexOf(": " + 2);
+				if(lines[i].startsWith("Letter:")){
+					lettter = lines[i].substring(lines[i].indexOf(": " + 2));
 				}
 				fandoms[fandomName] = {"characters": characters, 
 										"details"  : optionalDetails,
@@ -68,11 +69,8 @@ function parseData(data){
 
 function initializePage(){
 	for(var user in mapRequesterToRequests){
-		$("#dataTable").append(
-			$('<li>', {
-				text: user;
-			})
-		);
+		alert(user);
+		$("#dataTable").append("<li>" + user + "</li>");
 	}
 }
 
