@@ -6,6 +6,7 @@ $(document).ready(function(){
 	url: "http://precisememory.github.io/yule/Yule2014Requests.txt",
 	data: {},
 	success: function( data ) {
+		alert(data);
 		parseData(data);
 		initializePage();
 	}
@@ -18,10 +19,9 @@ var mapRequesterToRequests = {};
 var mapFandomToRequests = {};
 
 function parseData(data){
-	var dataByRequester = data.split("***\n"); //an array of strings, each with all data for a participant's requests
+	var dataByRequester = data.split("\n***\n"); //an array of strings, each with all data for a participant's requests
 	//regular expression to parse out requester name: "Request " + n + " by " + name
 	//var re = /Request \d by .+/;
-	alert(dataByRequester[0]); //debug
 	for(var dbr in dataByRequester){
 		var ao3username;
 		var fandoms = {};
